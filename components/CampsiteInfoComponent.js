@@ -190,10 +190,8 @@ class CampsiteInfo extends Component {
 									type: "font-awesome",
 								}}
 								leftIconContainerStyle={{ paddingRight: 10 }}
-								onChangeText={(comments) =>
-									this.setState({ comments: comments })
-								}
-								value={this.state.comment}
+								onChangeText={(text) => this.setState({ text: text })}
+								value={this.state.text}
 							></Input>
 							<View>
 								<Button
