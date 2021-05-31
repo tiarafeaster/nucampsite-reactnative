@@ -26,8 +26,13 @@ class Reservation extends Component {
 
 	createAlert = () =>
 		Alert.alert(
-			"Begin Search?",
-			"" + this.state.values + "",
+			`Begin Search? `,
+			`Number of Campers: ` +
+				this.state.campers +
+				`\n\nHike-In? ` +
+				this.state.hikeIn +
+				`\n\nDate: ` +
+				this.state.date.toLocaleDateString("en-US"),
 
 			[
 				{
@@ -114,8 +119,8 @@ class Reservation extends Component {
 					)}
 					<View style={styles.formRow}>
 						<Button
-							onPress={(values) => {
-								this.createAlert(values);
+							onPress={() => {
+								this.createAlert();
 								this.resetForm();
 							}}
 							title="Search"
